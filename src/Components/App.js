@@ -1,10 +1,19 @@
+import React from "react";
+import {Route, Switch} from "react-router-dom";
+import Navbar from "./Navbar"
 
 
 function App() {
   return (
-    <div className="App">
-      <h1>Application</h1>
-    </div>
+    <>
+      <div id="header">
+
+      </div>
+      <Navbar/>
+      <Switch>
+        
+      </Switch>
+    </>
   );
 }
 
