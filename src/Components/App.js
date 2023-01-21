@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Route, Switch} from "react-router-dom";
 import Navbar from "./Navbar";
 import Home from "./Home";
@@ -8,6 +8,20 @@ import Form from "./Form"
 
 
 function App() {
+
+const [shelters, setShelters] = useState([]);
+const [animals, setAnimals] = useState([]);
+const kennelMate = "http://localhost:3001/kennel-mate"
+
+useEffect(() => {
+  fetch(kennelMate)
+  .then(res => res.json())
+  .then(data => {
+    setShelters(data.shelters);
+    setAnimals(data.animals);
+  },)
+}, [])
+
   return (
     <div id="body">
       <div id="header">
@@ -19,10 +33,10 @@ function App() {
           <Home/>
         </Route>
         <Route exact path ="/Shelters">
-          <Shelters/>
+          <Shelters shelters={shelters}/>
         </Route>
         <Route exact path ="/Animals">
-          <Animals/>
+          <Animals animals={animals}/>
         </Route>
         <Route exact path ="/Form">
           <Form/>
