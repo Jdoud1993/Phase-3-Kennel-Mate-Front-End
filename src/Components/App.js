@@ -9,9 +9,9 @@ import Form from "./Form"
 
 function App() {
   return (
-    <>
+    <div id="body">
       <div id="header">
-
+        <h1>Header</h1>
       </div>
       <Navbar/>
       <Switch>
@@ -29,9 +29,9 @@ function App() {
         </Route>
       </Switch>
       <div id="footer">
-
+        <h2>Footer</h2>
       </div>
-    </>
+    </div>
   );
 }
 
