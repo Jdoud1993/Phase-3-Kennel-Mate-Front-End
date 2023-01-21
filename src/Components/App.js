@@ -12,8 +12,8 @@ function App() {
     <div id="body">
       <div id="header">
         <h1>Header</h1>
+        <Navbar/>
       </div>
-      <Navbar/>
       <Switch>
         <Route exact path="/">
           <Home/>
