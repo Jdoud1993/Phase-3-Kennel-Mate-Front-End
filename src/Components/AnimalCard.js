@@ -1,4 +1,5 @@
 import React from "react";
+import DeleteButton from "./DeleteButton";
 
 function AnimalCard({animal}) {
 
@@ -6,7 +7,7 @@ function AnimalCard({animal}) {
 
     return (
         <div className="animal-card">
-            <img src={animal.image} alt={animal.name}></img>
+            <img className="animal-img" src={animal.image} alt={animal.name}></img>
             <h3>Name: {animal.name}</h3>
             <h4>Species: {animal.species}</h4>
             <h4>Breed: {animal.breed}</h4>
@@ -15,6 +16,7 @@ function AnimalCard({animal}) {
             <ul>
                 {animalColors}
             </ul>
+            <DeleteButton/>
         </div>
     )
 }

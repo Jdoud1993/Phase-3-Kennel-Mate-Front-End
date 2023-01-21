@@ -1,10 +1,11 @@
 import React from "react";
+import CarouselFaded from "./CarouselFaded"
 
 
 function Home() {
     return(
         <div id="Home">
-            <h1>home</h1>
+            <CarouselFaded/>
         </div>
     )
 }

@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from "react";
 import {Route, Switch} from "react-router-dom";
-import Navbar from "./Navbar";
+import BlueNavbar from "./BlueNavbar";
 import Home from "./Home";
 import Shelters from "./Shelters";
 import Animals from "./Animals";
-import Form from "./Form"
+import Form from "./Form";
+
 
 
 function App() {
@@ -23,27 +24,28 @@ useEffect(() => {
 }, [])
 
   return (
-    <div id="body">
-      <div id="header">
-        <h1>Header</h1>
-        <Navbar/>
+    <div> 
+      <div>
+        <BlueNavbar/>
       </div>
-      <Switch>
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        <Route exact path ="/Shelters">
-          <Shelters shelters={shelters}/>
-        </Route>
-        <Route exact path ="/Animals">
-          <Animals animals={animals}/>
-        </Route>
-        <Route exact path ="/Form">
-          <Form/>
-        </Route>
-      </Switch>
-      <div id="footer">
-        <h2>Footer</h2>
+      <div id="body">
+        <Switch>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route exact path ="/Shelters">
+            <Shelters shelters={shelters}/>
+          </Route>
+          <Route exact path ="/Animals">
+            <Animals animals={animals}/>
+          </Route>
+          <Route exact path ="/Form">
+            <Form/>
+          </Route>
+        </Switch>
+        <div id="footer">
+          <h2>Footer</h2>
+        </div>
       </div>
     </div>
   );
