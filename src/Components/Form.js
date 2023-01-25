@@ -3,11 +3,11 @@ import React, {useState} from "react";
 function Form() {
     
     const [formData, setFormData] = useState({
-        image: "",
-        name: "",
-        species: "",
-        breed: "",
-        sex: "",
+        species:"",
+        breed:"",
+        name:"",
+        sex:"",
+        image:"",
     })
 
     function handleChange(e) {
