@@ -12,16 +12,26 @@ function App() {
 
 const [shelters, setShelters] = useState([]);
 const [animals, setAnimals] = useState([]);
-const kennelMate = "http://localhost:3001/kennel-mate"
 
 useEffect(() => {
-  fetch(kennelMate)
+  fetch("http://localhost:3001/shelters")
   .then(res => res.json())
   .then(data => {
-    setShelters(data.shelters);
-    setAnimals(data.animals);
+    setShelters(data);
   },)
 }, [])
+
+useEffect(() => {
+  fetch("http://localhost:3001/animals")
+  .then(res => res.json())
+  .then(data => {
+    setAnimals(data);
+  },)
+}, [])
+
+function handleAddAnimal(newAnimal) {
+  setAnimals(...animals, newAnimal)
+}
 
   return (
     <div> 
@@ -40,7 +50,7 @@ useEffect(() => {
             <Animals animals={animals}/>
           </Route>
           <Route exact path ="/Form">
-            <Form/>
+            <Form onAddAnimal={handleAddAnimal}/>
           </Route>
         </Switch>
         <div id="footer">
