@@ -6,7 +6,7 @@ function CarouselFaded() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://cdn.hpm.io/wp-content/uploads/2019/06/25143552/Dogs.jpg"
+          src="https://www.cityofsalinas.org/sites/default/files/departments_files/animal_services_files/puppy1.jpg"
           alt="First slide"
           style={{maxWidth: '100%', maxHeight: '800px', objectFit: 'contain'}}
         />
@@ -17,25 +17,25 @@ function CarouselFaded() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.gannett-cdn.com/presto/2022/08/29/PVCS/2a4037e1-4084-487a-83a7-65077fde8a86-IMG_3909.jpg"
+          src="https://uknow.uky.edu/sites/default/files/styles/facebook/public/17-01-30%20Animal%20Shelter%20study%20-%20Photo.jpg?itok=kFZA0HEf"
           alt="Second slide"
           style={{maxWidth: '100%', maxHeight: '800px', objectFit: 'contain'}}
         />
 
         <Carousel.Caption>
-          <h3>Welcome to Kennel Mate</h3>
+          <h3>Your animal shelter helper!</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://www.gannett-cdn.com/presto/2022/08/29/PVCS/2a4037e1-4084-487a-83a7-65077fde8a86-IMG_3909.jpg"
+          src="https://static.wixstatic.com/media/76240c_4574fd878abb4c368f5cbac7aef3342a~mv2.jpg/v1/fill/w_640,h_426,al_c,q_80,enc_auto/76240c_4574fd878abb4c368f5cbac7aef3342a~mv2.jpg"
           alt="Third slide"
           style={{maxWidth: '100%', maxHeight: '800px', objectFit: 'contain'}}
         />
 
         <Carousel.Caption>
-          <h3>Welcome to Kennel Mate</h3>
+          <h3>Please explore our wonderful options!</h3>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
