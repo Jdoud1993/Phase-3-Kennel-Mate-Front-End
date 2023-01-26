@@ -25,3 +25,19 @@
     width: 500px;
     border-style: solid;
 }
+
+#animal-disp {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.animal-card {
+    border-style: solid;
+    padding: 10px;
+}
+
+.animal-img {
+    height: 250px;
+    width: 250px;
+}
