@@ -1,9 +1,9 @@
 import React from "react";
 import AnimalCard from "./AnimalCard";
 
-function Animals({animals}) {
+function Animals({onDeleteAnimal, animals}) {
     
-    const animalList = animals.map((animal) => <AnimalCard key={animal.id} animal={animal}/>)
+    const animalList = animals.map((animal) => <AnimalCard key={animal.id} animal={animal} onDeleteAnimal={onDeleteAnimal}/>)
 
     return (
         <div id="animal-disp">

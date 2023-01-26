@@ -1,9 +1,15 @@
 import React from "react";
-import DeleteButton from "./DeleteButton";
+import Button from 'react-bootstrap/Button';
 
-function AnimalCard({animal}) {
+function AnimalCard({onDeleteAnimal, animal}) {
 
-   
+   function handleClick() {
+        fetch(`http://localhost:3001/animals/${animal.id}`, {
+            method: "DELETE",
+        })
+        .then((res) => res.json())
+        .then(() => onDeleteAnimal(animal))
+   }
 
     return (
         <div className="animal-card">
@@ -12,7 +18,7 @@ function AnimalCard({animal}) {
             <h4>Species: {animal.species}</h4>
             <h4>Breed: {animal.breed}</h4>
             <h4>Sex: {animal.sex}</h4>
-            <DeleteButton/>
+            <Button onClick={handleClick} variant="danger">Delete</Button>
         </div>
     )
 }
