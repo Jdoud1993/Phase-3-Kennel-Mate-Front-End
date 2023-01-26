@@ -7,3 +7,21 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+#shelter-disp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shelter-card {
+    border-style: solid;
+    padding: 10px;
+}
+
+.shelter-img {
+    height: auto;
+    width: 500px;
+    border-style: solid;
+}
