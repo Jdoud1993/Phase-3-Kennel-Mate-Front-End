@@ -5,6 +5,7 @@ import Home from "./Home";
 import Shelters from "./Shelters";
 import Animals from "./Animals";
 import Form from "./Form";
+import Footer from "./Footer"
 
 
 
@@ -53,9 +54,9 @@ function handleAddAnimal(newAnimal) {
             <Form onAddAnimal={handleAddAnimal}/>
           </Route>
         </Switch>
-        <div id="footer">
-          <h2>Footer</h2>
-        </div>
+      </div>
+      <div>
+        <Footer/>
       </div>
     </div>
   );
