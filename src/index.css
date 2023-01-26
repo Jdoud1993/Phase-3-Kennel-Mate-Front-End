@@ -41,3 +41,28 @@
     height: 250px;
     width: 250px;
 }
+
+#addAnimal {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#add-title {
+    margin-bottom: 100px;
+}
+
+input {
+    border-color: rgb(13, 115, 194);
+    border-radius: 5px;
+    border-width: 5px;
+}
+
+#submit {
+    transition-duration: 0.4s;
+  }
+  
+  #submit:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }

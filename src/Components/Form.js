@@ -6,7 +6,7 @@ function Form({onAddAnimal}) {
         species:"",
         breed:"",
         name:"",
-        sex:"",
+        sex:"Select",
         image:"",
     })
 
@@ -22,6 +22,10 @@ function Form({onAddAnimal}) {
 
     function handleSubmit(e) {
         e.preventDefault();
+        if(formData.species ==="" || formData.breed === "" || formData.name === "" || formData.sex === "Select" || formData.image === "") {
+            return window.alert("Please fill in all required fields and make a selection for sex!")
+        }
+        window.alert("Animal added!")
         fetch("http://localhost:3001/animals", {
             method: "POST",
             headers: {
@@ -31,11 +35,19 @@ function Form({onAddAnimal}) {
         })
         .then(res => res.json())
         .then(newAnimal => onAddAnimal(newAnimal))
+        setFormData({
+            species:"",
+            breed:"",
+            name:"",
+            sex:"Select",
+            image:"",
+        })
     }
     
     return(
-        <div id="addAnimal">
-            <form onSubmit={handleSubmit}>
+        <div>
+            <h1 id="add-title">Please Add Animal</h1>
+            <form id="addAnimal" onSubmit={handleSubmit}>
                 <input
                 type="text"
                 name="image"
@@ -69,7 +81,7 @@ function Form({onAddAnimal}) {
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
-                <button type="submit">Submit</button>
+                <button id="submit" type="submit">Submit</button>
             </form>
         </div>
     )
