@@ -58,7 +58,7 @@ function handleDeleteAnimal(deletedAnimal) {
             <Animals animals={animals} onDeleteAnimal={handleDeleteAnimal}/>
           </Route>
           <Route exact path ="/Animals/:id">
-            <AnimalDetail animals={animals}/>
+            <AnimalDetail />
           </Route>
           <Route exact path ="/Form">
             <Form onAddAnimal={handleAddAnimal}/>

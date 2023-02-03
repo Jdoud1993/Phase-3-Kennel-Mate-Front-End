@@ -10,7 +10,9 @@ function AnimalDetail() {
     useEffect(() => {
         fetch(`http://localhost:3001/animals/${id}`)
         .then((res) => res.json())
-        .then((data) => setAnimal(data))
+        .then((data) => {
+            setAnimal(data)
+        })
     }, [id])
 
     if (!animal) return <h2>Loading...</h2>
