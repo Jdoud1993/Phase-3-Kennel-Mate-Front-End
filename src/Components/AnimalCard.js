@@ -1,5 +1,6 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 function AnimalCard({onDeleteAnimal, animal}) {
 
@@ -18,6 +19,7 @@ function AnimalCard({onDeleteAnimal, animal}) {
             <h4>Species: {animal.species}</h4>
             <h4>Breed: {animal.breed}</h4>
             <h4>Sex: {animal.sex}</h4>
+            <Link className="see-more" exact to={`/Animals/${animal.id}`}>See More</Link>
             <Button onClick={handleClick} variant="danger">Delete</Button>
         </div>
     )

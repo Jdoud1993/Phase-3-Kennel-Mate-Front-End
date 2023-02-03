@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {useHistory} from "react-router-dom"
 
 function Form({onAddAnimal}) {
     
@@ -9,6 +10,8 @@ function Form({onAddAnimal}) {
         sex:"Select",
         image:"",
     })
+
+    const history = useHistory()
 
     function handleChange(e) {
         const name = e.target.name;
@@ -23,9 +26,8 @@ function Form({onAddAnimal}) {
     function handleSubmit(e) {
         e.preventDefault();
         if(formData.species ==="" || formData.breed === "" || formData.name === "" || formData.sex === "Select" || formData.image === "") {
-            return window.alert("Please fill in all required fields and make a selection for sex!")
+            return window.alert("Please fill in all fields below and make a selection for sex!")
         }
-        window.alert("Animal added!")
         fetch("http://localhost:3001/animals", {
             method: "POST",
             headers: {
@@ -34,7 +36,10 @@ function Form({onAddAnimal}) {
             body: JSON.stringify(formData)
         })
         .then(res => res.json())
-        .then(newAnimal => onAddAnimal(newAnimal))
+        .then(newAnimal => {
+            onAddAnimal(newAnimal)
+            history.push(`Animals/${newAnimal.id}`)
+        })
         setFormData({
             species:"",
             breed:"",
@@ -77,7 +82,7 @@ function Form({onAddAnimal}) {
                    placeholder="Breed"
                 />
                 <select name="sex" value={formData.sex} onChange={handleChange}>
-                    <option value="">Select</option>
+                    <option value="Select">Select</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>

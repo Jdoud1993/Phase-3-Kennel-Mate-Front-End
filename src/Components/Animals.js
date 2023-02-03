@@ -6,8 +6,11 @@ function Animals({onDeleteAnimal, animals}) {
     const animalList = animals.map((animal) => <AnimalCard key={animal.id} animal={animal} onDeleteAnimal={onDeleteAnimal}/>)
 
     return (
-        <div id="animal-disp">
-            {animalList}
+        <div>
+            <h1>Animals:</h1>
+            <div id="animal-disp">
+                {animalList}
+            </div>
         </div>
     )
 }

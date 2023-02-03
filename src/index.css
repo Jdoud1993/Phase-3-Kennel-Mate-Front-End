@@ -28,13 +28,14 @@
 
 #animal-disp {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .animal-card {
     border-style: solid;
     padding: 10px;
+    margin: 50px;
 }
 
 .animal-img {
@@ -65,4 +66,16 @@ input {
   #submit:hover {
     background-color: #4CAF50; /* Green */
     color: white;
+  }
+
+  .animal-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+
+  .see-more {
+    padding: 10px;
   }
