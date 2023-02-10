@@ -2,8 +2,10 @@ import React from "react";
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 
-function AnimalCard({onDeleteAnimal, animal}) {
-
+// function AnimalCard(props) {
+//     console.log(props)
+    
+function AnimalCard({onDeleteAnimal, animal}){
    function handleClick() {
         fetch(`http://localhost:3001/animals/${animal.id}`, {
             method: "DELETE",

@@ -10,6 +10,7 @@ import Footer from "./Footer"
 
 
 
+
 function App() {
 
 const [shelters, setShelters] = useState([]);
@@ -42,11 +43,11 @@ function handleDeleteAnimal(deletedAnimal) {
 }
 
   return (
-    <div> 
+    <div id="body"> 
       <div>
         <BlueNavbar/>
       </div>
-      <div id="body">
+      <div>
         <Switch>
           <Route exact path="/">
             <Home/>
