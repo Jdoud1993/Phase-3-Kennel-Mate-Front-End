@@ -25,7 +25,7 @@ useEffect(() => {
 }, [])
 
 useEffect(() => {
-  fetch("http://localhost:3001/animals")
+  fetch("http://localhost:9292/animals")
   .then(res => res.json())
   .then(data => {
     setAnimals(data);
