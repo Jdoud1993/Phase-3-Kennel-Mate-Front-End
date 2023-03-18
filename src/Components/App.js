@@ -17,7 +17,7 @@ const [shelters, setShelters] = useState([]);
 const [animals, setAnimals] = useState([]);
 
 useEffect(() => {
-  fetch("http://localhost:3001/shelters")
+  fetch("http://localhost:9292/shelters")
   .then(res => res.json())
   .then(data => {
     setShelters(data);
