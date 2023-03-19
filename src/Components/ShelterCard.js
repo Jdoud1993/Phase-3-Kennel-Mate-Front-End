@@ -6,6 +6,7 @@ function ShelterCard({shelter}) {
             <img className="shelter-img" src={shelter.image} alt={shelter.name}></img>
             <h3>{shelter.name}</h3>
             <h4>Contact Information:</h4>
+            <h5>Address: {shelter.address}</h5>
             <h5>Phone Number: {shelter.phone}</h5>
             <h5>Email Address: {shelter.email}</h5>
         </div>
