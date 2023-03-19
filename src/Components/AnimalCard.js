@@ -21,6 +21,8 @@ function AnimalCard({onDeleteAnimal, animal}){
             <h4>Species: {animal.species}</h4>
             <h4>Breed: {animal.breed}</h4>
             <h4>Sex: {animal.sex}</h4>
+            <h4>Age: {animal.age} yr</h4>
+            <h5>Shelter: {animal.shelter.name}</h5>
             <Link className="see-more" exact to={`/Animals/${animal.id}`}>See More</Link>
             <Button onClick={handleClick} variant="danger">Delete</Button>
         </div>
