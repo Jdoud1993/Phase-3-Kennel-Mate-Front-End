@@ -31,7 +31,7 @@ function AnimalForm({onAddAnimal, shelters}) {
             return window.alert("Please fill in all fields below, make a selection for sex, and make a selection for the shelter!")
         }
         window.alert("Animal added!")
-        fetch("http://localhost:3001/animals", {
+        fetch("http://localhost:9292/animals", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
