@@ -62,7 +62,7 @@ function handleDeleteAnimal(deletedAnimal) {
             <AnimalDetail />
           </Route>
           <Route exact path ="/AnimalForm">
-            <AnimalForm onAddAnimal={handleAddAnimal}/>
+            <AnimalForm onAddAnimal={handleAddAnimal} shelters={shelters}/>
           </Route>
         </Switch>
       </div>
