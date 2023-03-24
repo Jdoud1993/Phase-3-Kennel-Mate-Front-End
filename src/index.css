@@ -56,6 +56,12 @@
     justify-content: space-evenly;
 }
 
+#addShelter {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 #add-title {
     margin-bottom: 100px;
 }

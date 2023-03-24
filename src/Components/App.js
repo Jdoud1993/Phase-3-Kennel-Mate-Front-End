@@ -43,6 +43,10 @@ function handleDeleteAnimal(deletedAnimal) {
   setAnimals(updatedAnimals)
 }
 
+function handleAddShelter(newShelter) {
+  setShelters(...shelters, newShelter)
+}
+
   return (
     <div id="body"> 
       <div>
@@ -66,7 +70,7 @@ function handleDeleteAnimal(deletedAnimal) {
             <AnimalForm onAddAnimal={handleAddAnimal} shelters={shelters}/>
           </Route>
           <Route exact path ="/ShelterForm">
-            <ShelterForm />
+            <ShelterForm onAddShelter={handleAddShelter} />
           </Route>
         </Switch>
       </div>

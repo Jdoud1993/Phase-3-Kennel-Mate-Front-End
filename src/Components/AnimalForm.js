@@ -53,7 +53,7 @@ function AnimalForm({onAddAnimal, shelters}) {
     
     return(
         <div>
-            <h1 id="add-title">Please Add Animal</h1>
+            <h1 className="add-title">Please Add Animal</h1>
             <form id="addAnimal" onSubmit={handleSubmit}>
                 <input
                 type="text"
