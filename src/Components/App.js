@@ -47,6 +47,11 @@ function handleAddShelter(newShelter) {
   setShelters(...shelters, newShelter)
 }
 
+function handleUpdateAnimal(updatedAnimal) {
+  const oldAnimalsArr = animals.filter(animal=> animal.id !== updatedAnimal.id)
+  setAnimals(...oldAnimalsArr, updatedAnimal)
+}
+
   return (
     <div id="body"> 
       <div>
@@ -64,7 +69,7 @@ function handleAddShelter(newShelter) {
             <Animals animals={animals} onDeleteAnimal={handleDeleteAnimal}/>
           </Route>
           <Route exact path ="/Animals/:id">
-            <AnimalDetail />
+            <AnimalDetail shelters={shelters} onUpdateAnimal={handleUpdateAnimal}/>
           </Route>
           <Route exact path ="/AnimalForm">
             <AnimalForm onAddAnimal={handleAddAnimal} shelters={shelters}/>
