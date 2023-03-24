@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-function Form({onAddAnimal}) {
+function AnimalForm({onAddAnimal}) {
     
     const [formData, setFormData] = useState({
         species:"",
@@ -87,4 +87,4 @@ function Form({onAddAnimal}) {
     )
 }
 
-export default Form
+export default AnimalForm

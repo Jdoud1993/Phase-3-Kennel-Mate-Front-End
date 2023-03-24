@@ -11,7 +11,7 @@ function BlueNavBar() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/Shelters">Shelters</Nav.Link>
             <Nav.Link href="/Animals">Animals</Nav.Link>
-            <Nav.Link href="/Form">Add Animal</Nav.Link>
+            <Nav.Link href="/AnimalForm">Add Animal</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

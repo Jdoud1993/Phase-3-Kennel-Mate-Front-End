@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
     
 function AnimalCard({onDeleteAnimal, animal}){
    function handleClick() {
-        fetch(`http://localhost:3001/animals/${animal.id}`, {
+        fetch(`http://localhost:9292/animals/${animal.id}`, {
             method: "DELETE",
         })
         .then((res) => res.json())

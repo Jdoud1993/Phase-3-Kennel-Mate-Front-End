@@ -5,7 +5,7 @@ import Home from "./Home";
 import Shelters from "./Shelters";
 import Animals from "./Animals";
 import AnimalDetail from "./AnimalDetail"
-import Form from "./Form";
+import AnimalForm from "./AnimalForm";
 import Footer from "./Footer"
 
 
@@ -61,8 +61,8 @@ function handleDeleteAnimal(deletedAnimal) {
           <Route exact path ="/Animals/:id">
             <AnimalDetail />
           </Route>
-          <Route exact path ="/Form">
-            <Form onAddAnimal={handleAddAnimal}/>
+          <Route exact path ="/AnimalForm">
+            <AnimalForm onAddAnimal={handleAddAnimal}/>
           </Route>
         </Switch>
       </div>
