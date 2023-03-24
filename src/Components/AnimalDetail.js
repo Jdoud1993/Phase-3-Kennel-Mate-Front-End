@@ -8,7 +8,7 @@ function AnimalDetail() {
     
 
     useEffect(() => {
-        fetch(`http://localhost:3001/animals/${id}`)
+        fetch(`http://localhost:9292/animals/${id}`)
         .then((res) => res.json())
         .then((data) => {
             setAnimal(data)
@@ -19,11 +19,13 @@ function AnimalDetail() {
 
     return (
         <div className="animal-detail">
-            <img className="animal-img" src={animal.image} alt={animal.name}></img>
+           <img className="animal-img" src={animal.image} alt={animal.name}></img>
             <h3>Name: {animal.name}</h3>
             <h4>Species: {animal.species}</h4>
             <h4>Breed: {animal.breed}</h4>
             <h4>Sex: {animal.sex}</h4>
+            <h4>Age: {animal.age} yr</h4>
+            <h5>Shelter: {animal.shelter.name}</h5>
         </div>
     )
 }
