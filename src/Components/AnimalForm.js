@@ -1,7 +1,10 @@
 import React, {useState} from "react";
-import ShelterSubmission from "./ShelterSubmission"
+import ShelterSubmission from "./ShelterSubmission";
+import { useHistory } from "react-router-dom"
 
 function AnimalForm({onAddAnimal, shelters}) {
+
+    const history = useHistory()
     
     const [formData, setFormData] = useState({
         species:"",
@@ -30,7 +33,6 @@ function AnimalForm({onAddAnimal, shelters}) {
         if(formData.species ==="" || formData.breed === "" || formData.name === "" || formData.sex === "Select" || formData.age === "" || formData.image === "" || formData.shelter_id === "Select") {
             return window.alert("Please fill in all fields below, make a selection for sex, and make a selection for the shelter!")
         }
-        window.alert("Animal added!")
         fetch("http://localhost:9292/animals", {
             method: "POST",
             headers: {
@@ -39,7 +41,10 @@ function AnimalForm({onAddAnimal, shelters}) {
             body: JSON.stringify(formData)
         })
         .then(res => res.json())
-        .then(newAnimal => onAddAnimal(newAnimal))
+        .then(newAnimal => {
+            onAddAnimal(newAnimal)
+            history.push(`/Animals/${newAnimal.id}`)
+        })
         setFormData({
             species:"",
             breed:"",

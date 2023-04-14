@@ -26,7 +26,7 @@ function AnimalDetail({shelters, onUpdateAnimal}) {
         .then((data) => {
             setAnimal(data)
         })
-    }, [id, update])
+    }, [id])
 
     function handleClick () {
         if(update === false){
@@ -67,8 +67,10 @@ function AnimalDetail({shelters, onUpdateAnimal}) {
         .then((res) => res.json())
         .then((updatedAnimal) => {
             onUpdateAnimal(updatedAnimal)
+            setAnimal(updatedAnimal)
+            setUpdate(false)
         })
-        setUpdate(false)
+        
     }
 
     if (!animal) return <h2>Loading...</h2>

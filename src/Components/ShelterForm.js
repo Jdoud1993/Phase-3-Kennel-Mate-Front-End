@@ -1,6 +1,8 @@
 import React, {useState} from "react"; 
+import {useHistory} from "react-router-dom"
 
 function ShelterForm ({onAddShelter}) {
+    const history = useHistory()
     const [formData, setFormData] = useState({
         name:"",
         address:"",
@@ -23,7 +25,10 @@ function ShelterForm ({onAddShelter}) {
             body: JSON.stringify(formData)
         })
         .then(res => res.json())
-        .then(newShelter => onAddShelter(newShelter))
+        .then(newShelter => {
+            onAddShelter(newShelter)
+            history.push("/Shelters")
+        })
         setFormData({
             name:"",
             address:"",

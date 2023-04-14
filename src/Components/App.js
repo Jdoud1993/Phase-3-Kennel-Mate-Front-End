@@ -34,7 +34,7 @@ useEffect(() => {
 }, [])
 
 function handleAddAnimal(newAnimal) {
-  setAnimals(...animals, newAnimal)
+  setAnimals([...animals, newAnimal])
   
 }
 
@@ -44,12 +44,12 @@ function handleDeleteAnimal(deletedAnimal) {
 }
 
 function handleAddShelter(newShelter) {
-  setShelters(...shelters, newShelter)
+  setShelters([...shelters, newShelter])
 }
 
 function handleUpdateAnimal(updatedAnimal) {
   const oldAnimalsArr = animals.filter(animal=> animal.id !== updatedAnimal.id)
-  setAnimals(...oldAnimalsArr, updatedAnimal)
+  setAnimals([...oldAnimalsArr, updatedAnimal])
 }
 
   return (
